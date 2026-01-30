@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forever in My Heart</title>
+  <link rel="stylesheet" href="./frnd.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container fade-in">
+
+  <h1>Forever in My Heart</h1>
+  <p class="subtitle">“Unke saath bitaye hue pal hi yaad aate hain,
+aur aaj bhi wahi pal dil ko jeena sikha jaate hain.”</p>
+
+  <!-- 🎵 BACKGROUND MUSIC -->
+  <button id="musicBtn">▶ Play Music</button>
+  <audio id="bgMusic">
+    <source src= "C:\Users\nadaf\Downloads\When a Cat Becomes a Farmer… You Won’t Believe It! 😨😨😨.mp3"type="audio/mpeg">
+  </audio>
+
+  <!-- 🎥 VIDEOS -->
+  <div class="video-box">
+    <video controls>
+      <source src="C:\Users\nadaf\Downloads\WhatsApp Video 2026-01-31 at 12.37.12 AM.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Ek chhota sa pal 🤍</p>
+  </div>
+
+  <div class="video-box">
+    <video controls>
+      <source src="C:\Users\nadaf\Downloads\WhatsApp Video 2026-01-31 at 12.50.03 AM.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Ek aur yaad 🤍</p>
+  </div>
+
+  <!-- STORY -->
+  <div class="story">
+    <p>Itne memories hain, har tasveer ek kahani keh rahi hai.</p>
+    <p>Waqt badal gaya, par yaadein wahi reh gayi.</p>
+    <p class="name">— Always remembered 🤍</p>
+  </div>
+
+  <!-- 🖼️ GALLERY -->
+  <h2>Our Memories</h2>
+  <div class="gallery">
+    <div class="memory-card">
+      <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.20 AM (1).jpeg" onclick="zoomImage(this)">
+    <p>Ye muskaan aaj bhi dil ko sukoon deti hai.</p>
+    </div>
+    <div class="memory-card">
+         <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.20 AM (2).jpeg" onclick="zoomImage(this)">
+     <p>Hasi ke peeche chhupi ek khoobsurat dosti.</p>
+
+    </div>
+     <div class="memory-card">
+          <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.19 AM (1).jpeg" onclick="zoomImage(this)">
+    <p>Us din pata hi nahi tha, ye pal yaad ban jayega.</p>
+     </div>
+   
+   <div class="memory-card">
+    <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.19 AM.jpeg" onclick="zoomImage(this)">
+       <p>Saath hone ka ehsaas hi kaafi tha.</p>
+   </div>
+     <div class="memory-card">
+        <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.21 AM.jpeg" onclick="zoomImage(this)">
+      <p>Kuch tasveerein kabhi purani nahi hoti.</p>
+     </div>
+      <div class="memory-card">
+ <img src="C:\Users\nadaf\Downloads\WhatsApp Image 2026-01-31 at 12.03.20 AM.jpeg" onclick="zoomImage(this)">
+     <p>Ye pal hamesha mere saath rahenge.</p>
+      </div>
+   
+  </div>
+
+</div>
+
+<!-- IMAGE ZOOM MODAL -->
+<div id="imgModal" onclick="closeZoom()">
+  <img id="zoomImg">
+</div>
+<footer class="footer" id="footer">
+  <p>
+    “Last time hum baat nahi kar paaye,<br>
+    lekin aap hamesha yaadon mein rahe.<br>
+    Agar kabhi aap hurt hue ho,<br>
+    to dil se sorry.<br><br>
+    Yaad rakhna,<br>
+    hum dono bhai hamesha<br>
+    aapke saath khade rahenge.”
+  </p>
+</footer>
+<div class="footer-end">
+  <span>— Always in our hearts...❤️</span>
+</div>
+
+
+
+<script src="./frnd.js"></script>
+</body>
+</html>
+

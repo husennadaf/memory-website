@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  pointer-events: none;   /* ⭐ MOST IMPORTANT LINE */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ✨ Fade Animation */
+.fade-in {
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { font-size: 40px; }
+.subtitle { font-style: italic; color: #ddd; }
+
+/* 🎵 Music Button */
+#musicBtn {
+  padding: 8px 16px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* 🎥 Video */
+.video-box video {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+/* 🖼️ Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* 🔍 Zoom Modal */
+#imgModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#imgModal img {
+  max-width: 90%;
+  max-height: 90%;
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); }
+  to { transform: scale(1); }
+}
+
+/* STORY */
+.story {
+  background: rgba(255,255,255,0.12);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ⭐ 3 photo per row */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* mobile me 2 */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* small mobile me 1 */
+  }
+}
+
+.memory-card {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.memory-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.memory-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: italic;
+  color: #f1f1f1;
+}
+
+.footer {
+  width: 100%;
+  display: flex;                 /* ⭐ */
+  flex-direction: column;        /* ⭐ */
+  align-items: center;            /* ⭐ center horizontally */
+  justify-content: center;        /* ⭐ center vertically */
+  margin: 60px auto 0;
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  /* animation base */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s ease;
+}
+
+/* show on scroll */
+.footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-end {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #ddd;
+  opacity: 0.8;
+  animation: footerEndFade 3s ease forwards;
+}
+
+@keyframes footerEndFade {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
